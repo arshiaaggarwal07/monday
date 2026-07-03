@@ -124,6 +124,17 @@ Copy `.env.example` to `.env` in the backend folder and fill in:
 ---
 
 ## Screenshots
+<img width="959" height="473" alt="landing page" src="https://github.com/user-attachments/assets/7f6c531a-a07f-483c-837d-14d3a5c38c95" />
+<img width="956" height="467" alt="auth page" src="https://github.com/user-attachments/assets/912affa3-eca2-41e8-bb52-1be629b39acf" />
+<img width="959" height="473" alt="auth page" src="https://github.com/user-attachments/assets/95d73ba7-1873-433a-af69-6422f2205fc7" />
+<img width="956" height="472" alt="dashboard-calendar" src="https://github.com/user-attachments/assets/cc5fe3d0-6917-4ca6-9a05-4c7e3511f4d4" />
+<img width="1731" height="1322" alt="dashboard-board" src="https://github.com/user-attachments/assets/83b646b0-0a31-4270-a380-8cc1aa76e327" />
+<img width="955" height="470" alt="new task" src="https://github.com/user-attachments/assets/1cc6524b-b84a-4c0c-b7a9-5682dff2f7ab" />
+
+
+
+
+
 
 *Coming soon*
 
