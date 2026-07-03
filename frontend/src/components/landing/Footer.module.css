@@ -1,0 +1,31 @@
+/* frontend/src/components/landing/Footer.module.css */
+
+.footer {
+  border-top: 1.5px solid var(--l-border);
+  padding:    var(--l-space-8);
+  background: var(--l-bg);
+}
+
+.inner {
+  max-width:       var(--l-content-max-width);
+  margin:          0 auto;
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  flex-wrap:       wrap;
+  gap:             var(--l-space-4);
+}
+
+.logo {
+  font-family:    var(--l-font-sans);
+  font-size:      var(--l-text-base);
+  font-weight:    var(--l-weight-extrabold);
+  color:          var(--l-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.legal {
+  font-size: var(--l-text-xs);
+  color:     var(--l-text-muted);
+  font-weight: var(--l-weight-medium);
+}

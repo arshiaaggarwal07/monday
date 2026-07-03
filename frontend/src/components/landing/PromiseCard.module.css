@@ -1,0 +1,110 @@
+/* frontend/src/components/landing/PromiseCard.module.css */
+
+.card {
+  position:      relative;
+  background:    #FFFFFF;
+  border:        1.5px solid var(--l-border);
+  border-radius: var(--l-radius-xl);
+  padding:       var(--l-space-8);
+  width:         340px;
+  box-shadow:    var(--l-shadow-lg);
+}
+
+.header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  margin-bottom:   var(--l-space-4);
+}
+
+.label {
+  font-size:      var(--l-text-xs);
+  color:          var(--l-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight:    var(--l-weight-bold);
+}
+
+.statusDot {
+  width:         8px;
+  height:        8px;
+  border-radius: var(--l-radius-full);
+  background:    var(--l-coral);
+  animation:     pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+.promiseText {
+  font-family:   var(--l-font-serif);
+  font-size:     28px;
+  font-weight:   700;
+  font-style:    italic;
+  color:         var(--l-text-primary);
+  margin-bottom: var(--l-space-5);
+  line-height:   1.25;
+}
+
+.delayRow {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--l-space-2);
+  background:    var(--l-coral-soft);
+  border-radius: var(--l-radius-md);
+  padding:       var(--l-space-3) var(--l-space-4);
+  margin-bottom: var(--l-space-5);
+}
+
+.delayIcon { font-size: 16px; }
+
+.delayText {
+  font-size:   var(--l-text-sm);
+  font-weight: var(--l-weight-bold);
+  color:       var(--l-coral);
+}
+
+.divider {
+  height:        1px;
+  background:    var(--l-border);
+  margin-bottom: var(--l-space-4);
+}
+
+.excusesLabel {
+  font-size:      var(--l-text-xs);
+  color:          var(--l-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight:    var(--l-weight-bold);
+  margin-bottom:  var(--l-space-2);
+}
+
+.excuse {
+  font-size:  var(--l-text-sm);
+  color:      var(--l-text-secondary);
+  min-height: 22px;
+  font-style: italic;
+  font-weight: var(--l-weight-medium);
+}
+
+.badge {
+  position:      absolute;
+  top:           -16px;
+  right:         -24px;
+  background:    var(--l-gold);
+  color:         var(--l-text-primary);
+  font-family:   var(--l-font-sans);
+  font-size:     var(--l-text-xs);
+  font-weight:   var(--l-weight-bold);
+  padding:       8px 16px;
+  border-radius: var(--l-radius-full);
+  box-shadow:    0 4px 12px rgba(245,166,35,0.35);
+  transform:     rotate(4deg);
+}
+
+@media (max-width: 560px) {
+  .card  { width: 100%; max-width: 320px; }
+  .badge { right: 0; top: -14px; }
+}

@@ -1,0 +1,158 @@
+/* frontend/src/components/tasks/TaskCard.module.css */
+
+.card {
+  display:       flex;
+  align-items:   flex-start;
+  gap:           var(--space-3);
+  padding:       var(--space-3) var(--space-3);
+  border-radius: var(--radius-md);
+  cursor:        pointer;
+  transition:    background var(--transition-fast);
+  position:      relative;
+  /* group:         true; */
+}
+
+.card:hover {
+  background: var(--color-surface-2);
+}
+
+.completed {
+  opacity: 0.45;
+}
+
+.check {
+  width:            18px;
+  height:           18px;
+  border:           1.5px solid var(--color-border-hover);
+  border-radius:    var(--radius-sm);
+  background:       transparent;
+  cursor:           pointer;
+  flex-shrink:      0;
+  margin-top:       1px;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  font-size:        10px;
+  color:            var(--color-success);
+  transition:       border-color var(--transition-fast),
+                    background   var(--transition-fast);
+}
+
+.check:hover:not(:disabled) {
+  border-color: var(--color-success);
+}
+
+.checkDone {
+  background:   rgba(74,222,128,0.1);
+  border-color: var(--color-success);
+}
+
+.content {
+  flex:           1;
+  display:        flex;
+  flex-direction: column;
+  gap:            3px;
+  min-width:      0;
+}
+
+.title {
+  font-size:     var(--text-sm);
+  color:         var(--color-text-primary);
+  line-height:   var(--leading-tight);
+  white-space:   nowrap;
+  overflow:      hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-2);
+}
+
+.type {
+  font-size: var(--text-xs);
+  color:     var(--color-text-muted);
+}
+
+.reminderDot {
+  width:         5px;
+  height:        5px;
+  border-radius: var(--radius-full);
+  background:    var(--color-warning);
+}
+
+.repeat {
+  font-size: var(--text-xs);
+  color:     var(--color-text-muted);
+}
+
+/* ── Context menu ── */
+.menuWrapper {
+  position: relative;
+}
+
+.menuBtn {
+  background:    transparent;
+  border:        none;
+  color:         var(--color-text-muted);
+  cursor:        pointer;
+  padding:       2px var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size:     var(--text-base);
+  letter-spacing: 2px;
+  opacity:       0;
+  transition:    opacity    var(--transition-fast),
+                 background var(--transition-fast);
+}
+
+.card:hover .menuBtn {
+  opacity: 1;
+}
+
+.menuBtn:hover {
+  background: var(--color-border);
+  color:      var(--color-text-primary);
+}
+
+.menuOverlay {
+  position: fixed;
+  inset:    0;
+  z-index:  10;
+}
+
+.menu {
+  position:      absolute;
+  right:         0;
+  top:           calc(100% + 4px);
+  background:    var(--color-surface);
+  border:        1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow:    var(--shadow-md);
+  overflow:      hidden;
+  min-width:     120px;
+  z-index:       20;
+}
+
+.menuItem {
+  display:    block;
+  width:      100%;
+  padding:    var(--space-2) var(--space-4);
+  background: transparent;
+  border:     none;
+  color:      var(--color-text-secondary);
+  font-size:  var(--text-sm);
+  text-align: left;
+  cursor:     pointer;
+  transition: background var(--transition-fast),
+              color      var(--transition-fast);
+}
+
+.menuItem:hover {
+  background: var(--color-surface-2);
+  color:      var(--color-text-primary);
+}
+
+.menuItemDanger:hover {
+  color: var(--color-danger);
+}

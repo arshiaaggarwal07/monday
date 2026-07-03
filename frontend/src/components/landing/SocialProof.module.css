@@ -1,0 +1,65 @@
+/* frontend/src/components/landing/SocialProof.module.css */
+
+.section {
+  padding:    var(--l-space-24) var(--l-space-8);
+  background: var(--l-bg);
+}
+
+.inner {
+  max-width:  var(--l-content-max-width);
+  margin:     0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display:        inline-block;
+  font-size:      var(--l-text-xs);
+  color:          var(--l-green);
+  font-weight:    var(--l-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background:     var(--l-green-soft);
+  padding:        5px 14px;
+  border-radius:  var(--l-radius-full);
+  margin-bottom:  var(--l-space-4);
+}
+
+.heading {
+  font-family:    var(--l-font-sans);
+  font-size:      var(--l-text-2xl);
+  font-weight:    var(--l-weight-extrabold);
+  letter-spacing: -0.03em;
+  margin-bottom:  var(--l-space-10);
+  color:          var(--l-text-primary);
+  line-height:    1.15;
+}
+
+.tags {
+  display:         flex;
+  flex-wrap:       wrap;
+  justify-content: center;
+  gap:             var(--l-space-3);
+}
+
+.tag {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           var(--l-space-2);
+  background:    #FFFFFF;
+  border:        1.5px solid var(--l-border);
+  padding:       10px var(--l-space-5);
+  border-radius: var(--l-radius-full);
+  font-size:     var(--l-text-sm);
+  font-weight:   var(--l-weight-semibold);
+  color:         var(--l-text-primary);
+  box-shadow:    var(--l-shadow-sm);
+  cursor:        default;
+  transition:    transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.tag:hover {
+  border-color: var(--l-indigo-mid);
+  box-shadow:   var(--l-shadow-md);
+}
+
+.emoji { font-size: 18px; }

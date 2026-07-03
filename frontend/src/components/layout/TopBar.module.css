@@ -1,0 +1,53 @@
+/* frontend/src/components/layout/TopBar.module.css */
+
+.topBar {
+  height:          var(--navbar-height);
+  border-bottom:   1.5px solid var(--color-border);
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  padding:         0 var(--space-8);
+  background:      rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  position:        sticky;
+  top:             0;
+  z-index:         10;
+  flex-shrink:     0;
+  gap:             var(--space-4);
+}
+
+.menuBtn {
+  display:       none;
+  background:    transparent;
+  border:        none;
+  color:         var(--color-text-secondary);
+  font-size:     var(--text-lg);
+  cursor:        pointer;
+  padding:       var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  line-height:   1;
+  flex-shrink:   0;
+  transition:    color var(--transition-fast);
+}
+
+.menuBtn:hover { color: var(--color-accent); }
+
+.title {
+  font-size:      var(--text-md);
+  font-weight:    var(--weight-extrabold);
+  letter-spacing: -0.025em;
+  color:          var(--color-text-primary);
+  flex:           1;
+}
+
+.actions {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-3);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .topBar  { padding: 0 var(--space-4); }
+  .menuBtn { display: block; }
+}

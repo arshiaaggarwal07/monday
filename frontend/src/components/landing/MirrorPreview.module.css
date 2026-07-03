@@ -1,0 +1,89 @@
+/* frontend/src/components/landing/MirrorPreview.module.css */
+
+.section {
+  padding:    var(--l-space-24) var(--l-space-8);
+  background: var(--l-bg-soft);
+}
+
+.inner {
+  max-width:  680px;
+  margin:     0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display:        inline-block;
+  font-size:      var(--l-text-xs);
+  color:          var(--l-indigo);
+  font-weight:    var(--l-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background:     var(--l-indigo-soft);
+  padding:        5px 14px;
+  border-radius:  var(--l-radius-full);
+  margin-bottom:  var(--l-space-4);
+}
+
+.heading {
+  font-family:    var(--l-font-sans);
+  font-size:      var(--l-text-xl);
+  font-weight:    var(--l-weight-extrabold);
+  letter-spacing: -0.025em;
+  line-height:    1.25;
+  color:          var(--l-text-primary);
+  margin-bottom:  var(--l-space-12);
+}
+
+.timeline {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            var(--l-space-4);
+  margin-bottom:  var(--l-space-10);
+}
+
+.snapshot {
+  background:    #FFFFFF;
+  border:        1.5px solid var(--l-border);
+  border-radius: var(--l-radius-lg);
+  padding:       var(--l-space-6) var(--l-space-10);
+  box-shadow:    var(--l-shadow-sm);
+  width:         100%;
+  max-width:     440px;
+}
+
+.snapshotLater {
+  background:   #FFF0EC;
+  border-color: var(--l-coral-mid);
+}
+
+.date {
+  font-size:      var(--l-text-xs);
+  color:          var(--l-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight:    var(--l-weight-bold);
+  display:        block;
+  margin-bottom:  var(--l-space-2);
+}
+
+.quote {
+  font-family: var(--l-font-serif);
+  font-style:  italic;
+  font-size:   var(--l-text-lg);
+  color:       var(--l-text-primary);
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 22px;
+  color:     var(--l-text-muted);
+}
+
+.footnote {
+  font-size:   var(--l-text-sm);
+  color:       var(--l-text-secondary);
+  font-style:  italic;
+  font-weight: var(--l-weight-medium);
+  line-height: 1.6;
+}

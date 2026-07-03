@@ -1,0 +1,25 @@
+/* frontend/src/components/board/AddColumnTile.module.css */
+
+.tile {
+  border:          2px dashed var(--color-border);
+  border-radius:   var(--radius-lg);
+  min-height:      260px;
+  background:      transparent;
+  cursor:          pointer;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  transition:      border-color var(--transition-fast),
+                   background   var(--transition-fast);
+}
+
+.tile:hover {
+  border-color: var(--color-border-hover);
+  background:   var(--color-surface-2);
+}
+
+.plus {
+  font-size: 32px;
+  color:     var(--color-text-muted);
+  line-height: 1;
+}

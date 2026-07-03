@@ -1,0 +1,76 @@
+/* frontend/src/components/landing/CTASection.module.css */
+
+.section {
+  padding:    var(--l-space-24) var(--l-space-8) var(--l-space-24);
+  text-align: center;
+  background: var(--l-bg-soft);
+}
+
+.inner {
+  max-width:     640px;
+  margin:        0 auto;
+  background:    var(--l-indigo);
+  border-radius: var(--l-radius-xl);
+  padding:       var(--l-space-16) var(--l-space-12);
+  box-shadow:    0 24px 64px rgba(87,71,217,0.3);
+  position:      relative;
+  overflow:      hidden;
+}
+
+/* Decorative circles inside CTA card */
+.inner::before {
+  content:       '';
+  position:      absolute;
+  top:           -60px;
+  right:         -60px;
+  width:         200px;
+  height:        200px;
+  border-radius: var(--l-radius-full);
+  background:    rgba(255,255,255,0.06);
+  pointer-events: none;
+}
+
+.inner::after {
+  content:       '';
+  position:      absolute;
+  bottom:        -40px;
+  left:          -40px;
+  width:         140px;
+  height:        140px;
+  border-radius: var(--l-radius-full);
+  background:    rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+.heading {
+  font-family:    var(--l-font-sans);
+  font-size:      var(--l-text-2xl);
+  font-weight:    var(--l-weight-extrabold);
+  letter-spacing: -0.03em;
+  line-height:    1.2;
+  color:          #FFFFFF;
+  margin-bottom:  var(--l-space-8);
+  position:       relative;
+  z-index:        1;
+}
+
+.button {
+  background:    var(--l-coral);
+  color:         #FFFFFF;
+  border:        none;
+  padding:       18px 48px;
+  border-radius: var(--l-radius-full);
+  font-family:   var(--l-font-sans);
+  font-size:     var(--l-text-base);
+  font-weight:   var(--l-weight-bold);
+  cursor:        pointer;
+  box-shadow:    var(--l-shadow-coral);
+  position:      relative;
+  z-index:       1;
+  transition:    transform 0.15s, box-shadow 0.15s;
+}
+
+.button:hover {
+  transform:  translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255,92,53,0.4);
+}

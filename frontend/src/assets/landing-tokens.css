@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.landingTheme {
+  --l-bg:            #FFFFFF;
+  --l-bg-soft:       #F8F7FF;
+  --l-bg-warm:       #FFF8F3;
+  --l-surface:       #FFFFFF;
+  --l-border:        #EBEBF0;
+  --l-border-soft:   #F2F1F8;
+
+  --l-text-primary:   #16152A;
+  --l-text-secondary: #5A5870;
+  --l-text-muted:     #9896B0;
+
+  --l-coral:        #FF5C35;
+  --l-coral-soft:   #FFF0EC;
+  --l-coral-mid:    #FFCFC4;
+
+  --l-indigo:       #5747D9;
+  --l-indigo-soft:  #EFEDFF;
+  --l-indigo-mid:   #C5BFFF;
+
+  --l-gold:         #F5A623;
+  --l-gold-soft:    #FFF6E5;
+
+  --l-green:        #1DB87A;
+  --l-green-soft:   #E6F9F1;
+
+  --l-font-sans:  'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --l-font-serif: 'Fraunces', Georgia, serif;
+
+  --l-text-xs:   12px;
+  --l-text-sm:   14px;
+  --l-text-base: 16px;
+  --l-text-md:   18px;
+  --l-text-lg:   22px;
+  --l-text-xl:   30px;
+  --l-text-2xl:  42px;
+  --l-text-3xl:  58px;
+
+  --l-weight-normal:    400;
+  --l-weight-medium:    500;
+  --l-weight-semibold:  600;
+  --l-weight-bold:      700;
+  --l-weight-extrabold: 800;
+
+  --l-space-1: 4px;   --l-space-2: 8px;   --l-space-3: 12px;
+  --l-space-4: 16px;  --l-space-5: 20px;  --l-space-6: 24px;
+  --l-space-8: 32px;  --l-space-10: 40px; --l-space-12: 48px;
+  --l-space-16: 64px; --l-space-20: 80px; --l-space-24: 96px;
+
+  --l-radius-sm:   8px;
+  --l-radius-md:   14px;
+  --l-radius-lg:   22px;
+  --l-radius-xl:   32px;
+  --l-radius-full: 9999px;
+
+  --l-shadow-sm:    0 2px 8px rgba(87,71,217,0.07);
+  --l-shadow-md:    0 8px 28px rgba(87,71,217,0.11);
+  --l-shadow-lg:    0 20px 60px rgba(87,71,217,0.14);
+  --l-shadow-coral: 0 8px 28px rgba(255,92,53,0.25);
+
+  --l-content-max-width: 1160px;
+
+  background:  var(--l-bg);
+  color:       var(--l-text-primary);
+  font-family: var(--l-font-sans);
+  min-height:  100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.landingTheme * { box-sizing: border-box; }

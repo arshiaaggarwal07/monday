@@ -1,0 +1,151 @@
+/* frontend/src/components/tasks/TaskModal.module.css */
+
+.backdrop {
+  position:        fixed;
+  inset:           0;
+  background:      rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  z-index:         50;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  padding:         var(--space-4);
+  animation:       fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  width:          100%;
+  max-width:      520px;
+  background:     var(--color-surface);
+  border:         1px solid var(--color-border);
+  border-radius:  var(--radius-xl);
+  box-shadow:     var(--shadow-lg);
+  display:        flex;
+  flex-direction: column;
+  animation:      slideUp 0.2s ease;
+  max-height:     90vh;
+  overflow:       hidden;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(12px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ── Header ── */
+.header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  padding:         var(--space-6) var(--space-6) var(--space-5);
+  border-bottom:   1px solid var(--color-border);
+  flex-shrink:     0;
+}
+
+.title {
+  font-size:      var(--text-base);
+  font-weight:    var(--weight-semibold);
+  letter-spacing: -0.02em;
+  color:          var(--color-text-primary);
+}
+
+.closeBtn {
+  background:    transparent;
+  border:        none;
+  color:         var(--color-text-muted);
+  cursor:        pointer;
+  font-size:     var(--text-sm);
+  padding:       var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  transition:    color var(--transition-fast),
+                 background var(--transition-fast);
+}
+
+.closeBtn:hover {
+  color:       var(--color-text-primary);
+  background:  var(--color-surface-2);
+}
+
+/* ── Body ── */
+.body {
+  padding:        var(--space-6);
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-5);
+  overflow-y:     auto;
+  flex:           1;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:     var(--space-4);
+}
+
+.formError {
+  font-size:  var(--text-sm);
+  color:      var(--color-danger);
+  padding:    var(--space-3) var(--space-4);
+  background: rgba(248,113,113,0.08);
+  border-radius: var(--radius-md);
+}
+
+/* ── Footer ── */
+.footer {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  padding:         var(--space-4) var(--space-6);
+  border-top:      1px solid var(--color-border);
+  flex-shrink:     0;
+  gap:             var(--space-4);
+}
+
+.actions {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-2);
+}
+
+/* ── Reminder toggle ── */
+.reminderToggle {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-2);
+  background:    transparent;
+  border:        1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding:       var(--space-2) var(--space-4);
+  color:         var(--color-text-muted);
+  font-size:     var(--text-xs);
+  cursor:        pointer;
+  transition:    all var(--transition-fast);
+  white-space:   nowrap;
+}
+
+.reminderToggle:hover {
+  border-color: var(--color-border-hover);
+  color:        var(--color-text-secondary);
+}
+
+.reminderOn {
+  border-color: var(--color-warning);
+  color:        var(--color-warning);
+  background:   rgba(251,191,36,0.06);
+}
+
+.reminderIcon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+@media (max-width: 540px) {
+  .row    { grid-template-columns: 1fr; }
+  .footer { flex-direction: column; align-items: stretch; }
+  .actions { justify-content: flex-end; }
+}

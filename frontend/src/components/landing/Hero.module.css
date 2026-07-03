@@ -1,0 +1,157 @@
+/* frontend/src/components/landing/Hero.module.css */
+
+.hero {
+  position:   relative;
+  padding:    130px var(--l-space-8) var(--l-space-20);
+  max-width:  var(--l-content-max-width);
+  margin:     0 auto;
+  overflow:   visible;
+}
+
+/* Decorative blurred background blobs — matching the reference */
+.hero::before {
+  content:       '';
+  position:      fixed;
+  top:           -120px;
+  right:         -120px;
+  width:         420px;
+  height:        420px;
+  border-radius: var(--l-radius-full);
+  background:    radial-gradient(circle, rgba(87,71,217,0.12), transparent 70%);
+  pointer-events: none;
+  z-index:       0;
+}
+
+.hero::after {
+  content:       '';
+  position:      fixed;
+  bottom:        100px;
+  left:          -80px;
+  width:         280px;
+  height:        280px;
+  border-radius: var(--l-radius-full);
+  background:    radial-gradient(circle, rgba(255,92,53,0.08), transparent 70%);
+  pointer-events: none;
+  z-index:       0;
+}
+
+.inner {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  gap:             var(--l-space-16);
+  position:        relative;
+  z-index:         1;
+}
+
+.left {
+  flex:      1;
+  max-width: 560px;
+}
+
+/* Eyebrow label — like "SPECIAL OFFER FIRST CUSTOMER" in reference */
+.eyebrow {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            var(--l-space-2);
+  background:     var(--l-indigo-soft);
+  color:          var(--l-indigo);
+  font-size:      var(--l-text-xs);
+  font-weight:    var(--l-weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding:        6px 14px;
+  border-radius:  var(--l-radius-full);
+  margin-bottom:  var(--l-space-5);
+}
+
+.headline {
+  font-family:    var(--l-font-sans);
+  font-size:      var(--l-text-3xl);
+  font-weight:    var(--l-weight-extrabold);
+  line-height:    1.1;
+  letter-spacing: -0.03em;
+  color:          var(--l-text-primary);
+  margin-bottom:  var(--l-space-5);
+}
+
+.wordSlot {
+  display:        inline-block;
+  position:       relative;
+  min-width:      320px;
+  height:         1.15em;
+  vertical-align: bottom;
+  overflow:       visible;
+}
+
+.cyclingWord {
+  position:    absolute;
+  left:        0;
+  top:         0;
+  display:     inline-block;
+  color:       var(--l-coral);
+  font-family: var(--l-font-serif);
+  font-style:  italic;
+  font-weight: 600;
+}
+
+.subheadline {
+  font-size:     var(--l-text-md);
+  color:         var(--l-text-secondary);
+  line-height:   1.7;
+  margin-bottom: var(--l-space-8);
+  max-width:     440px;
+  font-weight:   var(--l-weight-medium);
+}
+
+.actions {
+  display:     flex;
+  align-items: center;
+  gap:         var(--l-space-5);
+  flex-wrap:   wrap;
+}
+
+.primaryBtn {
+  background:    var(--l-indigo);
+  color:         #FFFFFF;
+  border:        none;
+  padding:       16px 36px;
+  border-radius: var(--l-radius-full);
+  font-family:   var(--l-font-sans);
+  font-size:     var(--l-text-base);
+  font-weight:   var(--l-weight-bold);
+  cursor:        pointer;
+  box-shadow:    var(--l-shadow-md);
+  transition:    transform 0.15s, box-shadow 0.15s;
+}
+
+.primaryBtn:hover {
+  transform:  translateY(-2px);
+  box-shadow: 0 12px 32px rgba(87,71,217,0.35);
+}
+
+.secondaryBtn {
+  font-size:   var(--l-text-base);
+  font-weight: var(--l-weight-semibold);
+  color:       var(--l-text-secondary);
+  display:     flex;
+  align-items: center;
+  gap:         6px;
+  transition:  color 0.15s;
+}
+
+.secondaryBtn:hover { color: var(--l-text-primary); }
+
+.right {
+  flex:            0 0 auto;
+  display:         flex;
+  justify-content: center;
+  position:        relative;
+}
+
+@media (max-width: 900px) {
+  .inner    { flex-direction: column; gap: var(--l-space-12); }
+  .headline { font-size: var(--l-text-2xl); }
+  .wordSlot { min-width: 180px; }
+  .hero     { padding-top: 110px; }
+}

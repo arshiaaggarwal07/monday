@@ -1,0 +1,94 @@
+/* frontend/src/assets/tokens.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* ── Base colours ────────────────────────────────── */
+  --color-bg:           #FFFFFF;
+  --color-surface:      #FFFFFF;
+  --color-surface-2:    #F8F7FF;   /* faint indigo tint — same as landing --l-bg-soft */
+  --color-border:       #EBEBF0;
+  --color-border-hover: #C5BFFF;   /* indigo-mid on hover */
+
+  /* ── Text ────────────────────────────────────────── */
+  --color-text-primary:   #16152A;  /* matches landing --l-text-primary */
+  --color-text-secondary: #5A5870;
+  --color-text-muted:     #9896B0;
+
+  /* ── Brand accents ───────────────────────────────── */
+  --color-accent:       #5747D9;   /* indigo — primary CTAs */
+  --color-accent-soft:  #EFEDFF;   /* indigo-soft — hover fills */
+  --color-accent-mid:   #C5BFFF;   /* indigo-mid — borders on hover */
+
+  --color-coral:        #FF5C35;   /* coral — highlights, active pips */
+  --color-coral-soft:   #FFF0EC;
+  --color-gold:         #F5A623;   /* gold — warnings, reminders */
+  --color-gold-soft:    #FFF6E5;
+
+  /* ── Semantic ────────────────────────────────────── */
+  --color-success:  #1DB87A;
+  --color-warning:  #F5A623;
+  --color-danger:   #FF5C35;
+
+  /* ── Sticky note palette (Board view) ───────────── */
+  --color-note-yellow: #FBE8A6;
+  --color-note-blue:   #B8E3E0;
+  --color-note-pink:   #F6CFD0;
+  --color-note-orange: #F8CFA0;
+  --color-note-green:  #C3E6C8;
+  --color-note-purple: #D9CCEE;
+  --color-note-gray:   #E8E5DC;
+
+  /* ── Typography ──────────────────────────────────── */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 15px;
+  --text-md:   17px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  32px;
+  --text-3xl:  44px;
+  --text-4xl:  60px;
+
+  --weight-normal:   400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-extrabold: 800;
+
+  --leading-tight:  1.15;
+  --leading-normal: 1.5;
+  --leading-loose:  1.75;
+
+  /* ── Spacing ─────────────────────────────────────── */
+  --space-1:  4px;   --space-2:  8px;   --space-3:  12px;
+  --space-4:  16px;  --space-5:  20px;  --space-6:  24px;
+  --space-8:  32px;  --space-10: 40px;  --space-12: 48px;
+  --space-16: 64px;  --space-20: 80px;  --space-24: 96px;
+
+  /* ── Radii ───────────────────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────────────── */
+  --shadow-sm:   0 2px 8px rgba(87,71,217,0.07);
+  --shadow-md:   0 8px 28px rgba(87,71,217,0.11);
+  --shadow-lg:   0 20px 60px rgba(87,71,217,0.14);
+  --shadow-glow: 0 0 0 rgba(0,0,0,0);
+
+  /* ── Transitions ─────────────────────────────────── */
+  --transition-fast:   0.12s ease;
+  --transition-base:   0.2s ease;
+  --transition-slow:   0.35s ease;
+
+  /* ── Layout ──────────────────────────────────────── */
+  --sidebar-width:     240px;
+  --navbar-height:     60px;
+  --content-max-width: 1100px;
+}

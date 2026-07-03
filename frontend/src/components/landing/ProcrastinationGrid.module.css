@@ -1,0 +1,119 @@
+/* frontend/src/components/landing/ProcrastinationGrid.module.css */
+
+.section {
+  padding:    var(--l-space-24) var(--l-space-8);
+  background: var(--l-bg-soft);
+}
+
+.inner {
+  max-width:  var(--l-content-max-width);
+  margin:     0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display:        inline-block;
+  font-size:      var(--l-text-xs);
+  color:          var(--l-indigo);
+  font-weight:    var(--l-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background:     var(--l-indigo-soft);
+  padding:        5px 14px;
+  border-radius:  var(--l-radius-full);
+  margin-bottom:  var(--l-space-4);
+}
+
+.heading {
+  font-family:    var(--l-font-sans);
+  font-size:      var(--l-text-2xl);
+  font-weight:    var(--l-weight-extrabold);
+  letter-spacing: -0.03em;
+  margin-bottom:  var(--l-space-12);
+  color:          var(--l-text-primary);
+  line-height:    1.15;
+}
+
+.grid {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:                   var(--l-space-6);
+}
+
+.card {
+  position:      relative;
+  border-radius: var(--l-radius-lg);
+  padding:       var(--l-space-10) var(--l-space-6);
+  min-height:    180px;
+  cursor:        default;
+  border:        1.5px solid transparent;
+  overflow:      hidden;
+  transition:    transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--l-shadow-md);
+}
+
+.green  {
+  background:   var(--l-green-soft);
+  border-color: rgba(29,184,122,0.2);
+}
+.orange {
+  background:   var(--l-coral-soft);
+  border-color: rgba(255,92,53,0.2);
+}
+.yellow {
+  background:   var(--l-gold-soft);
+  border-color: rgba(245,166,35,0.2);
+}
+
+.face, .faceBack {
+  position:        absolute;
+  inset:           0;
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  justify-content: center;
+  padding:         var(--l-space-6);
+}
+
+.promise {
+  font-family:   var(--l-font-serif);
+  font-style:    italic;
+  font-size:     var(--l-text-lg);
+  font-weight:   600;
+  color:         var(--l-text-primary);
+  margin-bottom: var(--l-space-3);
+  line-height:   1.3;
+}
+
+.hint {
+  font-size:   var(--l-text-xs);
+  color:       var(--l-text-muted);
+  font-weight: var(--l-weight-medium);
+}
+
+.clockIcon {
+  font-size:     32px;
+  margin-bottom: var(--l-space-3);
+}
+
+.stillWaiting {
+  font-size:   var(--l-text-base);
+  color:       var(--l-text-secondary);
+  text-align:  center;
+  line-height: 1.5;
+  font-weight: var(--l-weight-medium);
+}
+
+.stillWaiting strong {
+  color:       var(--l-text-primary);
+  font-weight: var(--l-weight-extrabold);
+  font-size:   var(--l-text-lg);
+}
+
+@media (max-width: 800px) {
+  .grid    { grid-template-columns: 1fr; }
+  .heading { font-size: var(--l-text-xl); }
+}

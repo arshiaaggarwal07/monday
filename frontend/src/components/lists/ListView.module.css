@@ -1,0 +1,289 @@
+/* frontend/src/components/lists/ListView.module.css */
+
+.wrapper {
+  max-width: var(--content-max-width);
+  margin:    0 auto;
+  padding:   var(--space-2) 0 var(--space-16);
+}
+
+/* ── Header ── */
+.header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  margin-bottom:   var(--space-8);
+  padding-bottom:  var(--space-6);
+  border-bottom:   1px solid var(--color-border);
+}
+
+.headerLeft {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-3);
+}
+
+.colorDot {
+  width:         10px;
+  height:        10px;
+  border-radius: var(--radius-full);
+  flex-shrink:   0;
+}
+
+.title {
+  font-size:      var(--text-lg);
+  font-weight:    var(--weight-bold);
+  letter-spacing: -0.025em;
+  color:          var(--color-text-primary);
+}
+
+.count {
+  font-size:     var(--text-xs);
+  color:         var(--color-text-muted);
+  background:    var(--color-surface-2);
+  border:        1px solid var(--color-border);
+  padding:       3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.newBtn {
+  background:    var(--color-accent);
+  color:         var(--color-bg);
+  border:        none;
+  padding:       9px 20px;
+  border-radius: var(--radius-full);
+  font-size:     var(--text-sm);
+  font-weight:   var(--weight-semibold);
+  cursor:        pointer;
+  transition:    opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.newBtn:hover {
+  opacity:   0.88;
+  transform: translateY(-1px);
+}
+
+/* ── Empty state ── */
+.empty {
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  justify-content: center;
+  padding:         var(--space-24) var(--space-8);
+  text-align:      center;
+  gap:             var(--space-3);
+}
+
+.emptyIcon {
+  font-size: 28px;
+  color:     var(--color-text-muted);
+}
+
+.emptyTitle {
+  font-size:   var(--text-base);
+  font-weight: var(--weight-semibold);
+  color:       var(--color-text-primary);
+}
+
+.emptyDesc {
+  font-size: var(--text-sm);
+  color:     var(--color-text-muted);
+}
+
+/* ── Section ── */
+.section {
+  display:        flex;
+  flex-direction: column;
+  margin-bottom:  var(--space-8);
+}
+
+.sectionLabel {
+  font-size:      var(--text-xs);
+  color:          var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight:    var(--weight-semibold);
+  padding:        var(--space-4) 0 var(--space-2);
+  border-top:     1px solid var(--color-border);
+  margin-top:     var(--space-2);
+}
+
+/* ── Task row ── */
+.row {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-4);
+  padding:       var(--space-4) var(--space-3);
+  border-radius: var(--radius-md);
+  transition:    background var(--transition-fast);
+  border-bottom: 1px solid var(--color-border-soft, var(--color-border));
+}
+
+.row:hover {
+  background: var(--color-surface-2);
+}
+
+.rowCompleted {
+  opacity: 0.5;
+}
+
+/* ── Checkbox ── */
+.check {
+  width:            20px;
+  height:           20px;
+  border:           1.5px solid var(--color-border-hover);
+  border-radius:    var(--radius-sm);
+  background:       transparent;
+  cursor:           pointer;
+  flex-shrink:      0;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  transition:       border-color var(--transition-fast),
+                    background   var(--transition-fast);
+}
+
+.check:hover:not(:disabled) {
+  border-color: var(--color-success);
+}
+
+.checkDone {
+  background:   rgba(79, 154, 110, 0.12);
+  border-color: var(--color-success);
+}
+
+.checkMark {
+  font-size: 11px;
+  color:     var(--color-success);
+}
+
+/* ── Row cells ── */
+.taskTitle {
+  flex:          1;
+  font-size:     var(--text-sm);
+  font-weight:   var(--weight-medium);
+  color:         var(--color-text-primary);
+  cursor:        pointer;
+  min-width:     0;
+  white-space:   nowrap;
+  overflow:      hidden;
+  text-overflow: ellipsis;
+}
+
+.taskTitle:hover {
+  color: var(--color-text-secondary);
+}
+
+.badge {
+  font-size:     var(--text-xs);
+  font-weight:   var(--weight-medium);
+  color:         var(--color-text-primary);
+  padding:       3px 10px;
+  border-radius: var(--radius-full);
+  flex-shrink:   0;
+}
+
+.dueDate {
+  font-size:   var(--text-xs);
+  color:       var(--color-text-muted);
+  flex-shrink: 0;
+  min-width:   80px;
+  text-align:  right;
+}
+
+.repeat {
+  font-size:   var(--text-xs);
+  color:       var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.reminderDot {
+  width:         6px;
+  height:        6px;
+  border-radius: var(--radius-full);
+  background:    var(--color-warning);
+  flex-shrink:   0;
+}
+
+/* ── Context menu ── */
+.menuWrapper {
+  position:    relative;
+  flex-shrink: 0;
+}
+
+.menuBtn {
+  background:    transparent;
+  border:        none;
+  color:         var(--color-text-muted);
+  cursor:        pointer;
+  padding:       4px 8px;
+  border-radius: var(--radius-sm);
+  font-size:     var(--text-base);
+  letter-spacing: 2px;
+  opacity:       0;
+  transition:    opacity    var(--transition-fast),
+                 background var(--transition-fast);
+}
+
+.row:hover .menuBtn {
+  opacity: 1;
+}
+
+.menuBtn:hover {
+  background: var(--color-border);
+}
+
+.menuOverlay {
+  position: fixed;
+  inset:    0;
+  z-index:  10;
+}
+
+.menu {
+  position:      absolute;
+  right:         0;
+  top:           calc(100% + 4px);
+  background:    var(--color-surface);
+  border:        1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow:    var(--shadow-md);
+  overflow:      hidden;
+  min-width:     120px;
+  z-index:       20;
+}
+
+.menuItem {
+  display:    block;
+  width:      100%;
+  padding:    var(--space-2) var(--space-4);
+  background: transparent;
+  border:     none;
+  color:      var(--color-text-secondary);
+  font-size:  var(--text-sm);
+  text-align: left;
+  cursor:     pointer;
+  transition: background var(--transition-fast),
+              color      var(--transition-fast);
+}
+
+.menuItem:hover {
+  background: var(--color-surface-2);
+  color:      var(--color-text-primary);
+}
+
+.menuItemDanger:hover {
+  color: var(--color-danger);
+}
+
+/* ── Skeleton ── */
+.skeletonRow {
+  height:        52px;
+  background:    var(--color-surface-2);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  animation:     shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 0.9; }
+}

@@ -1,0 +1,91 @@
+/* frontend/src/components/board/StickyNote.module.css */
+
+.note {
+  border-radius: var(--radius-lg);
+  padding:       var(--space-6);
+  min-height:    260px;
+  display:       flex;
+  flex-direction: column;
+  transition:    transform var(--transition-base);
+}
+
+.note:hover {
+  transform: translateY(-3px);
+}
+
+.header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  margin-bottom:   var(--space-4);
+}
+
+.title {
+  font-size:      var(--text-md);
+  font-weight:    var(--weight-bold);
+  letter-spacing: -0.02em;
+  color:          var(--color-text-primary);
+}
+
+.addBtn {
+  width:           24px;
+  height:          24px;
+  border-radius:   var(--radius-full);
+  background:      rgba(255,255,255,0.5);
+  border:          none;
+  color:           var(--color-text-primary);
+  font-size:       var(--text-base);
+  line-height:     1;
+  cursor:          pointer;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  flex-shrink:     0;
+  transition:      background var(--transition-fast);
+}
+
+.addBtn:hover {
+  background: rgba(255,255,255,0.8);
+}
+
+.list {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-2);
+  flex:           1;
+}
+
+.item {
+  display:       flex;
+  align-items:   flex-start;
+  gap:           var(--space-2);
+  cursor:        pointer;
+  padding:       var(--space-1) 0;
+}
+
+.checkbox {
+  width:           14px;
+  height:          14px;
+  border-radius:   var(--radius-sm);
+  border:          1.5px solid rgba(40,37,31,0.3);
+  background:      rgba(255,255,255,0.4);
+  cursor:          pointer;
+  flex-shrink:     0;
+  margin-top:      3px;
+}
+
+.checkbox:hover {
+  border-color: rgba(40,37,31,0.5);
+}
+
+.itemText {
+  font-size:   var(--text-sm);
+  color:       var(--color-text-primary);
+  line-height: var(--leading-normal);
+}
+
+.emptyHint {
+  font-size:  var(--text-xs);
+  color:      rgba(40,37,31,0.4);
+  font-style: italic;
+}
