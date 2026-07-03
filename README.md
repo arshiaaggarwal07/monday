@@ -85,6 +85,7 @@ Open http://localhost:5173
 
 ## Project Structure
 
+```
 monday/
 ├── backend/
 │   ├── prisma/
@@ -98,13 +99,14 @@ monday/
 │       └── utils/           # JWT, Prisma client
 │
 └── frontend/
-└── src/
-├── api/             # Axios client + typed API functions
-├── components/      # UI primitives, layout, calendar, board
-├── contexts/        # AuthContext, ToastContext
-├── hooks/           # useMonthCalendar, useBoardData, useTasks
-├── pages/           # Landing, Auth, Dashboard, Settings
-└── types/           # Shared TypeScript interfaces
+    └── src/
+        ├── api/             # Axios client + typed API functions
+        ├── components/      # UI primitives, layout, calendar, board
+        ├── contexts/        # AuthContext, ToastContext
+        ├── hooks/           # useMonthCalendar, useBoardData, useTasks
+        ├── pages/           # Landing, Auth, Dashboard, Settings
+        └── types/           # Shared TypeScript interfaces
+```
 
 ---
 
