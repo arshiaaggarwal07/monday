@@ -131,13 +131,6 @@ Copy `.env.example` to `.env` in the backend folder and fill in:
 <img width="1731" height="1322" alt="dashboard-board" src="https://github.com/user-attachments/assets/83b646b0-0a31-4270-a380-8cc1aa76e327" />
 <img width="955" height="470" alt="new task" src="https://github.com/user-attachments/assets/1cc6524b-b84a-4c0c-b7a9-5682dff2f7ab" />
 
-
-
-
-
-
-*Coming soon*
-
 ---
 
 ## Author
